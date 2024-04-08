@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+@use "../base/reset" as *;
+
+.container {
+  width: $desktop-page-width;
+  margin: 0 auto;
+}
+
+.header__container,
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(114px);
+}
+
+@media (max-width: $bp-l) {
+  .container {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
