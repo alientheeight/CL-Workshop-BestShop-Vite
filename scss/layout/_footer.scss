@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+@use "../components" as *;
+
+.footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 89px;
+  background-color: $color-light-grey;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.16);
+
+  &__right-part {
+    display: flex;
+    gap: rem(20px);
+  }
+
+  &__logo-small {
+    display: inline-flex;
+    margin-bottom: 7px;
+    font-family: $ff-title-font;
+    font-weight: $fw-light;
+    font-size: $fz-logo-small;
+    text-decoration: none;
+    color: $color-primary;
+  }
+
+  &__copyright {
+    font-size: 0.6875rem;
+    color: $color-grey;
+  }
+}
