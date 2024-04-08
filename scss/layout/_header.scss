@@ -1,0 +1,139 @@
+@use "../abstracts" as *;
+@use "../components" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: rem(70px);
+  background-color: $color-white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  z-index: 10;
+}
+
+.header__logo {
+  display: flex;
+  font-family: $ff-title-font;
+  font-weight: $fw-light;
+  font-size: $fz-logo-big;
+  color: $color-primary;
+  text-decoration: none;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: rem(80px);
+}
+
+.header__menu-item {
+  display: flex;
+  align-items: center;
+  a {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    height: rem(70px);
+    font-weight: $fw-bold;
+    font-size: $fz-menu;
+    letter-spacing: 0.1875rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-grey;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    transition: 0.4s;
+    &:hover,
+    &:focus {
+      color: $color-black;
+      border-bottom: 4px solid $color-primary;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.header__menu-burger {
+  width: 60px;
+  height: 50px;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: none;
+
+  strong {
+    position: absolute;
+    left: -99999px;
+  }
+
+  span {
+    width: 36px;
+    height: 5px;
+    background: $color-primary;
+  }
+}
+
+@media (max-width: $bp-m) {
+  .header__menu-burger {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    left: 0;
+    top: rem(58px);
+    background: $color-white;
+    width: 100%;
+    box-shadow: 0 5px 6px rgba(#000, 0.2);
+    translate: -110%;
+    z-index: -1;
+    transition: 0.3s;
+  }
+
+  .header__menu {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: rem(10px);
+    padding: 20px;
+  }
+
+  .header__menu-item a {
+    width: rem(80px);
+    height: rem(30px);
+  }
+
+  body.show-menu {
+    .menu {
+      translate: 0;
+    }
+
+    .header__menu-burger {
+      position: relative;
+      span:first-of-type {
+        display: none;
+      }
+      span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+      }
+      span:nth-of-type(2) {
+        rotate: 45deg;
+      }
+      span:nth-of-type(3) {
+        rotate: -45deg;
+      }
+    }
+  }
+}
+
