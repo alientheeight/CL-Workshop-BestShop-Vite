@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  border-radius: 35px;
+  font-family: $ff-main-font;
+  text-decoration: none;
+  color: $color-white;
+  font-size: 0.8125rem;
+  font-weight: $fw-bold;
+}
+
+.button--contact {
+  width: 226px;
+  height: 57px;
+}
+
+.button--primary {
+  background-color: $color-primary;
+  box-shadow: 0 10px 14px $color-primary-shadow;
+}
+
+.button--professional {
+  width: 165px;
+  box-shadow: 0 10px 14px $color-primary-shadow;
+}
+
+.button--basic {
+  background-color: $color-redish;
+}
+
+.button--premium {
+  background-color: $color-green;
+}
