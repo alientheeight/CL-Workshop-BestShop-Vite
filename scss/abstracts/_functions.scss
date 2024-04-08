@@ -1,0 +1,14 @@
+@use "sass:math";
+
+//---------------------
+//convert px to em and rem
+//---------------------
+@function rem($size, $base: 16px) {
+  $remSize: math.div($size, $base);
+  @return #{$remSize}rem;
+}
+
+@function em($size, $base: 16px) {
+  $remSize: math.div($size, $base);
+  @return #{$remSize}em;
+}

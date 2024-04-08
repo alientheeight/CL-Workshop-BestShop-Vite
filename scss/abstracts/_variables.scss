@@ -1,0 +1,82 @@
+@use "functions" as *;
+
+/*Font Family*/
+$ff-main-font: "Open Sans", sans-serif;
+$ff-title-font: "Raleway", sans-serif;
+
+/*Font Weight*/
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+$fz-regular: 1rem;
+
+/*Font Size*/
+$fz-11: rem(11px);
+$fz-12: rem(12px);
+$fz-13: rem(13px);
+$fz-14: rem(14px);
+$fz-16: 1rem;
+$fz-17: rem(17px);
+$fz-20: rem(20px);
+$fz-21: rem(21px);
+$fz-30: rem(30px);
+$fz-32: rem(32px);
+$fz-35: rem(35px);
+$fz-36: rem(36px);
+$fz-40: rem(40px);
+$fz-46: rem(46px);
+$fz-49: rem(49px);
+
+$fz-main: $fz-16;
+$fz-menu: $fz-11;
+$fz-section-heading: $fz-36;
+$fz-section-heading-mobile: $fz-30;
+$fz-hero-heading: $fz-49;
+$fz-hero-heading-mobile: $fz-35;
+$fz-statistic-amount: $fz-20;
+$fz-statistic-description-mobile: $fz-17;
+$fz-benefits-description-mobile: $fz-14;
+$fz-plan-title: $fz-20;
+$fz-plan-title-accent: $fz-21;
+$fz-plan-price: $fz-46;
+$fz-plan-limited: $fz-12;
+$fz-plan-property: $fz-14;
+$fz-contact-heading: $fz-49;
+$fz-contact-heading-mobile: $fz-40;
+$fz-contact-label: $fz-11;
+$fz-contact-consent: $fz-12;
+$fz-logo-big: $fz-32;
+$fz-btn: $fz-13;
+$fz-btn-hero: $fz-16;
+
+
+
+/*Colors*/
+$color-primary: #08a6e4;
+$color-primary-dark: darken($color-primary, 10%);
+$color-primary-shadow: rgba(7, 172, 230, 0.16);
+$color-redish: #fb3b64;
+$color-redish-dark: darken($color-redish, 20%);
+$color-green: #55dfb4;
+$color-green-dark: darken($color-green, 20%);
+$color-black: #000000;
+$color-grey: #a5a5a5;
+$color-medium-grey: #e8e9ed;
+$color-light-grey: #f7f7f7;
+$color-white: #ffffff;
+$accent-color: rgba(0,0,0,0) !default;
+$btn-accent-color: #fff;
+$btn-accent-color-hover: #fff;
+
+/*Others*/
+$desktop-page-width: 1352px;
+
+/*Breakpoints*/
+$bp-xs: 320px;
+$bp-s: 460px;
+$bp-sm: 600px;
+$bp-m: 830px;
+$bp-ml: 926px;
+$bp-l: 1352px;
+
