@@ -1,0 +1,111 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+
+.statistics {
+  margin: 0 auto;
+  padding: 100px 0 120px;
+  width: 100%;
+
+  &__title {
+    width: 100%;
+    margin-bottom: 100px;
+    font-family: $ff-title-font;
+    font-weight: $fw-regular;
+    font-size: $fz-section-heading;
+    text-align: center;
+    color: $color-black;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 223px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-count,
+    &-description {
+      font-family: $ff-title-font;
+    }
+
+    &-count {
+      font-weight: $fw-extra-bold;
+      font-size: $fz-statistic-amount;
+      color: $color-black;
+      letter-spacing: 0.375rem;
+      padding: 15px 0;
+      text-align: center;
+      line-height: 1.5rem;
+    }
+
+    &-description {
+      font-weight: $fw-regular;
+      color: $color-grey;
+      font-size: 1$fz-statistic-description;
+      line-height: 1.1875rem;
+      text-align: center;
+    }
+  }
+
+  &__item-image {
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 80%;
+      height: 80%;
+      position: relative;
+      right: -30px;
+    }
+  }
+}
+
+.item-image--decoration-red {
+  background-color: $color-redish;
+}
+
+.item-image--decoration-blue {
+  background-color: $color-primary;
+}
+
+.item-image--decoration-green {
+  background-color: $color-green;
+}
+
+@media (max-width: $bp-l) {
+  .statistics__list {
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  .statistics__item {
+    width: 30%;
+  }
+}
+
+@media (max-width: $bp-sm) {
+  .statistics {
+    padding: 50px 0;
+
+    &__title {
+      margin-bottom: 25px;
+    }
+
+    &__list {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    &__item {
+      width: 100%;
+    }
+  }
+}
