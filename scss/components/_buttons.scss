@@ -22,6 +22,10 @@
 .button--primary {
   background-color: $color-primary;
   box-shadow: 0 10px 14px $color-primary-shadow;
+  transition: 0.3s;
+  &:hover{
+    background-color: $color-primary-dark;
+  }
 }
 
 .button--professional {
