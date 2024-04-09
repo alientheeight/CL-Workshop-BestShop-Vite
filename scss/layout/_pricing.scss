@@ -1,0 +1,210 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+
+
+.pricing {
+  margin-top: 100px;
+
+  &-title {
+    font-family: $ff-title-font;
+    font-size: $fz-section-heading;
+    text-align: center;
+    padding-bottom: 100px;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+}
+
+.price-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 372px;
+  padding: 34px 0;
+  border-radius: 18px;
+  &[data-type="basic"] {
+    border: 1px solid $color-redish;
+    .product-price {
+      color: $color-redish;
+    }
+    .buy-plan {
+      background-color: $color-redish;
+      &:hover {
+        background-color: $color-redish-dark;
+      };
+    }
+  }
+  &[data-type="professional"] {
+    padding: 54px 0 54px;
+    border: 1px solid $color-primary;
+    width: 405px;
+    box-shadow: 0 0 27px $color-primary-shadow;
+    .product-price {
+      color: $color-primary;
+    }
+    .buy-plan {
+      background-color: $color-primary;
+      &:hover{
+        background-color: $color-primary-dark;
+      }
+      box-shadow: 0 10px 14px $color-primary-shadow;
+    }
+    .product-title {
+      font-size: 21px;
+    }
+  }
+  &[data-type="premium"] {
+    border: 1px solid $color-green;
+    .product-price {
+      color: $color-green;
+    }
+    .buy-plan {
+      background-color: $color-green;
+      &:hover{
+        background-color: $color-green-dark;
+      }
+    }
+  }
+  p {
+    font-family: $ff-title-font;
+    font-weight: $fw-bold;
+    font-size: $fz-plan-limited;
+  }
+}
+
+.price-box__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-box__container-vertical{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-box__title {
+  font-family: $ff-title-font;
+  font-weight: $fw-bold;
+  font-size: $fz-plan-title;
+  text-align: center;
+}
+
+.product-price {
+  color: $accent-color;
+  font-weight: $fw-light;
+  font-size: $fz-plan-price;
+  margin: 20px 0;
+  text-align: center;
+}
+.price-box__properties-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0 40px;
+}
+
+.price-box__product-property {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+
+  &[data-type-prop="pros"]::before {
+    content: "";
+    background: url("../../assets/checkmark-2.svg") no-repeat center / cover;
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+  &[data-type-prop="cons"]::before {
+    content: "";
+    background: url("../../assets/close.svg") no-repeat center / cover;
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+}
+
+.buy-plan {
+  padding: 20px 60px;
+  border-radius: 40px;
+  background-color: $btn-accent-color;
+  text-decoration: none;
+  color: $color-white;
+  font-weight: $fw-bold;
+  font-size: $fz-btn;
+  position: absolute;
+  bottom: 0;
+  translate: 0 50%;
+  display: inline-flex;
+  transition: 0.3s;
+  &:hover {
+    background-color: $btn-accent-color-hover;
+  }
+}
+
+@media (max-width: $bp-l){
+  .price-box{
+    width: 30%;
+    max-width: 372px;
+    &[data-type="professional"]{
+      width: 36%;
+      max-width: 405px;
+    }
+  }
+}
+
+@media (max-width: $bp-ml){
+  .pricing{
+    margin-top: 50px;
+    &-title {
+      padding-bottom: 50px;
+    }
+    &-list{
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  .price-box{
+    margin-bottom: rem(48px);
+    width: 90%;
+    max-width: 600px;
+    &[data-type="professional"]{
+      width: 100%;
+      max-width: 660px;
+    }
+    &__container{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+    &__properties-list{
+      width: 50%;
+      align-items: flex-start;
+      margin: 15px 0 10px;
+    }
+    &__product-property{
+      align-items: flex-start;
+    }
+
+    &__container-vertical{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      min-width: 120px;
+    }
+  }
+}
+
