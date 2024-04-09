@@ -120,14 +120,14 @@
 
   &[data-type-prop="pros"]::before {
     content: "";
-    background: url("../../assets/checkmark-2.svg") no-repeat center / cover;
+    background: url("../assets/checkmark-2.svg") no-repeat center / cover;
     width: 14px;
     height: 14px;
     margin-right: 10px;
   }
   &[data-type-prop="cons"]::before {
     content: "";
-    background: url("../../assets/close.svg") no-repeat center / cover;
+    background: url("../assets/close.svg") no-repeat center / cover;
     width: 14px;
     height: 14px;
     margin-right: 10px;
