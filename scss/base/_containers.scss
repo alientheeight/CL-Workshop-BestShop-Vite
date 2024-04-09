@@ -27,3 +27,18 @@
     padding-right: 1.5rem;
   }
 }
+
+@media (max-width: $bp-mml) {
+  .contact__container {
+    justify-content: space-around;
+    gap: 0;
+  }
+}
+
+@media (max-width: $bp-ml) {
+  .contact__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,133 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+
+/*Contact*/
+.contact {
+  padding: 59px 0;
+}
+
+.column-info {
+  max-width: 350px;
+  .contact-title {
+    font-family: $ff-title-font;
+    font-size: $fz-contact-heading;
+    margin-bottom: 22px;
+  }
+
+  .contact-data {
+    margin-top: 42px;
+    display: flex;
+    justify-content: space-between;
+    color: $color-grey;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      &--mail::before {
+        content: "";
+        width: 27px;
+        height: 27px;
+        background: url("../../assets/mail-icon.svg") no-repeat center / cover;
+        margin-right: 10px;
+      }
+      &--phone::before {
+        content: "";
+        width: 27px;
+        height: 27px;
+        background: url("../../assets/phone-icon.svg") no-repeat center / cover;
+        margin-right: 10px;
+      }
+    }
+  }
+
+}
+
+.contact-data__link {
+}
+
+.column-contact {
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+}
+
+.form-label {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: $fz-contact-label;
+  font-weight: $fw-regular;
+  letter-spacing: 0.1875rem;
+  text-transform: uppercase;
+  color: $color-primary;
+}
+.form-row {
+  margin-bottom: 30px;
+  &--last {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.form-control {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid $color-grey;
+  &:focus {
+    border-color: $color-redish;
+  }
+}
+
+.form-check {
+  display: flex;
+  gap: 10px;
+  &-label {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: $color-grey;
+  }
+  &-input {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid $color-grey;
+    appearance: none;
+
+    &:focus {
+      border-color: $color-redish;
+    }
+
+    &:checked {
+      background: url("../../assets/checkmark.svg") no-repeat center;
+    }
+  }
+}
+
+@media (max-width: $bp-ml) {
+  .contact {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  .column-info {
+    min-width: 440px;
+    margin-bottom: 56px;
+  }
+}
+
+@media (max-width: $bp-s) {
+  .column-info {
+    min-width: 100%;
+    .contact-title {
+      font-size: $fz-contact-heading-mobile;
+    }
+  }
+
+  .column-contact {
+    width: 100%;
+  }
+
+  .contact-data {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
